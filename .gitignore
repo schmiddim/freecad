@@ -1,4 +1,3 @@
 *.stl
 *.amf
 
-DB_TYPE=tursodb;TURSOR_DSN=libsql://kozukai-local-schmiddim.turso.io?authToken\=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mjc0MTI5OTIsImlkIjoiZjQyNGZkNGQtZDBmOS00MTc1LTk5MTUtZjYzYWE2ZjdkZGZhIn0.EJlSEJ5dVpCwgoPVWPPu9_y7fpUN0GicWCS9Eg-lEOBl1h5wxogwbD_sXjEayBdkD6vcROAWU2FtSa-XziD_Dg
