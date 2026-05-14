@@ -1,3 +1,5 @@
 *.stl
 *.amf
-
+*.FCBak
+.*FCStd1
+.idea
