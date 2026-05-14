@@ -31,7 +31,7 @@ jobs:
           restore-keys: conda-freecad-${{ runner.os }}-
 
       - name: Install Miniforge
-        uses: conda-incubator/setup-miniconda@v3
+        uses: conda-incubator/setup-miniconda@v4
         with:
           miniforge-version: latest
           activate-environment: freecad-env
@@ -67,7 +67,7 @@ jobs:
           key: conda-freecad-${{ runner.os }}-${{ hashFiles('.github/workflows/cad-gallery.yaml') }}
           restore-keys: conda-freecad-${{ runner.os }}-
 
-      - uses: conda-incubator/setup-miniconda@v3
+      - uses: conda-incubator/setup-miniconda@v4
         with:
           miniforge-version: latest
           activate-environment: freecad-env
