@@ -1,8 +1,14 @@
 name: CAD Gallery
+# ~/.config/shell/gh-status.sh
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write      # für GitHub Releases (Assets hochladen)
   pages: write         # für GitHub Pages deploy
   id-token: write      # Pages OIDC-Auth
+
 on:
   push:
     branches: [master]
@@ -17,14 +23,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Cache conda environment
+        uses: actions/cache@v4
+        with:
+          path: ~/miniconda3/envs/freecad-env
+          key: conda-freecad-${{ runner.os }}-${{ hashFiles('.github/workflows/cad-gallery.yaml') }}
+          restore-keys: conda-freecad-${{ runner.os }}-
+
       - name: Install Miniforge
         uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
           activate-environment: freecad-env
+          conda-remove-defaults: true
 
       - name: Install FreeCAD
-        run: conda install -c conda-forge python=3.12 freecad -y
+        run: |
+          if ! conda list freecad | grep -q freecad; then
+            conda install -c conda-forge python=3.12 freecad -y
+          fi
 
       - name: Export STL + STEP
         run: freecadcmd scripts/export.py
@@ -42,11 +59,26 @@ jobs:
         shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache conda environment
+        uses: actions/cache@v4
+        with:
+          path: ~/miniconda3/envs/freecad-env
+          key: conda-freecad-${{ runner.os }}-${{ hashFiles('.github/workflows/cad-gallery.yaml') }}
+          restore-keys: conda-freecad-${{ runner.os }}-
+
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
           activate-environment: freecad-env
-      - run: conda install -c conda-forge python=3.12 freecad -y
+          conda-remove-defaults: true
+
+      - name: Install FreeCAD
+        run: |
+          if ! conda list freecad | grep -q freecad; then
+            conda install -c conda-forge python=3.12 freecad -y
+          fi
+
       - run: sudo apt-get install -y xvfb
 
       - name: Render PNG screenshots
@@ -86,7 +118,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./gallery
