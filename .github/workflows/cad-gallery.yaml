@@ -5,7 +5,7 @@ permissions:
   id-token: write      # Pages OIDC-Auth
 on:
   push:
-    branches: [main]
+    branches: [master]
     tags: ['v*']
 
 jobs:
