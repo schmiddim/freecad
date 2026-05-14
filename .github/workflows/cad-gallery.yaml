@@ -11,6 +11,9 @@ on:
 jobs:
   export:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
 
@@ -18,10 +21,10 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
-          python-version: "3.12"
+          activate-environment: freecad-env
 
       - name: Install FreeCAD
-        run: conda install -c conda-forge freecad -y
+        run: conda install -c conda-forge python=3.12 freecad -y
 
       - name: Export STL + STEP
         run: FreeCADCmd scripts/export.py
@@ -34,13 +37,16 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     needs: export
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
-          python-version: "3.12"
-      - run: conda install -c conda-forge freecad -y
+          activate-environment: freecad-env
+      - run: conda install -c conda-forge python=3.12 freecad -y
       - run: sudo apt-get install -y xvfb
 
       - name: Render PNG screenshots
