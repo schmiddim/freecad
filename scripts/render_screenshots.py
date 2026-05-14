@@ -14,8 +14,16 @@ for fcstd in glob.glob("**/*.FCStd", recursive=True):
     view.fitAll()
     
     # 3 Perspektiven
-    for angle, suffix in [("front", "front"), ("right", "right"), ("top", "top")]:
-        view.viewIsometric()
-        view.saveImage(f"gallery/img/{name}_{suffix}.png", 800, 600, "White")
+    view.viewFront()
+    view.fitAll()
+    view.saveImage(f"gallery/img/{name}_front.png", 800, 600, "White")
+    
+    view.viewRight()
+    view.fitAll()
+    view.saveImage(f"gallery/img/{name}_right.png", 800, 600, "White")
+    
+    view.viewTop()
+    view.fitAll()
+    view.saveImage(f"gallery/img/{name}_top.png", 800, 600, "White")
     
     FreeCAD.closeDocument(doc.Name)
