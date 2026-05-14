@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CAD Gallery</title>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/STLLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 2rem; background: #fafafa; }
+    h1 { color: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: white; }
+    .stl-viewer { width: 100%; height: 240px; background: #f0f0f0; border-radius: 4px; }
+    .thumbs { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .thumbs img { width: 80px; height: 60px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #ddd; }
+    .thumbs img:hover { border-color: #007bff; }
+    h3 { margin: 8px 0 4px; font-size: 14px; color: #333; }
+    .download { font-size: 12px; color: #007bff; text-decoration: none; }
+    .download:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<h1>CAD Gallery</h1>
+<div class="grid">
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-0" data-stl="models/taifunGlasVerschlosstool2.stl"></div>
+    <h3>taifunGlasVerschlosstool2</h3>
+    <a class="download" href="models/taifunGlasVerschlosstool2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-1" data-stl="models/poang-remote.stl"></div>
+    <h3>poang-remote</h3>
+    <a class="download" href="models/poang-remote.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-2" data-stl="models/vapehull.stl"></div>
+    <h3>vapehull</h3>
+    <a class="download" href="models/vapehull.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-3" data-stl="models/keychronv4.stl"></div>
+    <h3>keychronv4</h3>
+    <a class="download" href="models/keychronv4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-4" data-stl="models/numlock-height.stl"></div>
+    <h3>numlock-height</h3>
+    <a class="download" href="models/numlock-height.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-5" data-stl="models/bett-krempel.stl"></div>
+    <h3>bett-krempel</h3>
+    <a class="download" href="models/bett-krempel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-6" data-stl="models/vapehull3.stl"></div>
+    <h3>vapehull3</h3>
+    <a class="download" href="models/vapehull3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-7" data-stl="models/balljoint17.stl"></div>
+    <h3>balljoint17</h3>
+    <a class="download" href="models/balljoint17.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-8" data-stl="models/fahrrad-hinterachse.stl"></div>
+    <h3>fahrrad-hinterachse</h3>
+    <a class="download" href="models/fahrrad-hinterachse.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-9" data-stl="models/garmin-vorbau.stl"></div>
+    <h3>garmin-vorbau</h3>
+    <a class="download" href="models/garmin-vorbau.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-10" data-stl="models/treck-light.stl"></div>
+    <h3>treck-light</h3>
+    <a class="download" href="models/treck-light.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-11" data-stl="models/pomodoro.stl"></div>
+    <h3>pomodoro</h3>
+    <a class="download" href="models/pomodoro.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-12" data-stl="models/deckel-eimer.stl"></div>
+    <h3>deckel-eimer</h3>
+    <a class="download" href="models/deckel-eimer.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-13" data-stl="models/led-ring3.stl"></div>
+    <h3>led-ring3</h3>
+    <a class="download" href="models/led-ring3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-14" data-stl="models/kobo-huelle-auf-socke.stl"></div>
+    <h3>kobo-huelle-auf-socke</h3>
+    <a class="download" href="models/kobo-huelle-auf-socke.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-15" data-stl="models/stitching-helper2.stl"></div>
+    <h3>stitching-helper2</h3>
+    <a class="download" href="models/stitching-helper2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-16" data-stl="models/treck-cryptonite.stl"></div>
+    <h3>treck-cryptonite</h3>
+    <a class="download" href="models/treck-cryptonite.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-17" data-stl="models/razor-3.stl"></div>
+    <h3>razor-3</h3>
+    <a class="download" href="models/razor-3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-18" data-stl="models/shaver1.stl"></div>
+    <h3>shaver1</h3>
+    <a class="download" href="models/shaver1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-19" data-stl="models/vesa-iiyama.stl"></div>
+    <h3>vesa-iiyama</h3>
+    <a class="download" href="models/vesa-iiyama.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-20" data-stl="models/leder-3mm.stl"></div>
+    <h3>leder-3mm</h3>
+    <a class="download" href="models/leder-3mm.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-21" data-stl="models/garmin-trek920.stl"></div>
+    <h3>garmin-trek920</h3>
+    <a class="download" href="models/garmin-trek920.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-22" data-stl="models/boox-leder3.stl"></div>
+    <h3>boox-leder3</h3>
+    <a class="download" href="models/boox-leder3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-23" data-stl="models/gucci-keks.stl"></div>
+    <h3>gucci-keks</h3>
+    <a class="download" href="models/gucci-keks.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-24" data-stl="models/lotionjar2.stl"></div>
+    <h3>lotionjar2</h3>
+    <a class="download" href="models/lotionjar2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-25" data-stl="models/huelleauf-sockel.stl"></div>
+    <h3>huelleauf-sockel</h3>
+    <a class="download" href="models/huelleauf-sockel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-26" data-stl="models/babylampe-bett.stl"></div>
+    <h3>babylampe-bett</h3>
+    <a class="download" href="models/babylampe-bett.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-27" data-stl="models/cable-box-1.stl"></div>
+    <h3>cable-box-1</h3>
+    <a class="download" href="models/cable-box-1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-28" data-stl="models/razor4.stl"></div>
+    <h3>razor4</h3>
+    <a class="download" href="models/razor4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-29" data-stl="models/boox3-2-approach.stl"></div>
+    <h3>boox3-2-approach</h3>
+    <a class="download" href="models/boox3-2-approach.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-30" data-stl="models/cleat-alignment-tool.stl"></div>
+    <h3>cleat-alignment-tool</h3>
+    <a class="download" href="models/cleat-alignment-tool.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-31" data-stl="models/bilder-rahmen-gross.stl"></div>
+    <h3>bilder-rahmen-gross</h3>
+    <a class="download" href="models/bilder-rahmen-gross.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-32" data-stl="models/implantat.stl"></div>
+    <h3>implantat</h3>
+    <a class="download" href="models/implantat.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-33" data-stl="models/stifte2.stl"></div>
+    <h3>stifte2</h3>
+    <a class="download" href="models/stifte2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-34" data-stl="models/teleskop-reader-4.stl"></div>
+    <h3>teleskop-reader-4</h3>
+    <a class="download" href="models/teleskop-reader-4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-35" data-stl="models/boox-leder6.stl"></div>
+    <h3>boox-leder6</h3>
+    <a class="download" href="models/boox-leder6.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-36" data-stl="models/jar-kitchen2.stl"></div>
+    <h3>jar-kitchen2</h3>
+    <a class="download" href="models/jar-kitchen2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-37" data-stl="models/box-klappe2.stl"></div>
+    <h3>box-klappe2</h3>
+    <a class="download" href="models/box-klappe2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-38" data-stl="models/kiste-kleine-ahle.stl"></div>
+    <h3>kiste-kleine-ahle</h3>
+    <a class="download" href="models/kiste-kleine-ahle.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-39" data-stl="models/faba.stl"></div>
+    <h3>faba</h3>
+    <a class="download" href="models/faba.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-40" data-stl="models/shaver-accessoires2.stl"></div>
+    <h3>shaver-accessoires2</h3>
+    <a class="download" href="models/shaver-accessoires2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-41" data-stl="models/taifunGlasVerschlosstool.stl"></div>
+    <h3>taifunGlasVerschlosstool</h3>
+    <a class="download" href="models/taifunGlasVerschlosstool.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-42" data-stl="models/loeffel.stl"></div>
+    <h3>loeffel</h3>
+    <a class="download" href="models/loeffel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-43" data-stl="models/cube-cryptonite.stl"></div>
+    <h3>cube-cryptonite</h3>
+    <a class="download" href="models/cube-cryptonite.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-44" data-stl="models/busch-müller-fuss.stl"></div>
+    <h3>busch-müller-fuss</h3>
+    <a class="download" href="models/busch-müller-fuss.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-45" data-stl="models/stifte4.stl"></div>
+    <h3>stifte4</h3>
+    <a class="download" href="models/stifte4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-46" data-stl="models/kobo.stl"></div>
+    <h3>kobo</h3>
+    <a class="download" href="models/kobo.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-47" data-stl="models/panel-back-convertstl.stl"></div>
+    <h3>panel-back-convertstl</h3>
+    <a class="download" href="models/panel-back-convertstl.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-48" data-stl="models/kinderwagen-telefon.stl"></div>
+    <h3>kinderwagen-telefon</h3>
+    <a class="download" href="models/kinderwagen-telefon.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-49" data-stl="models/boox-leder5.stl"></div>
+    <h3>boox-leder5</h3>
+    <a class="download" href="models/boox-leder5.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-50" data-stl="models/emmi-heart.stl"></div>
+    <h3>emmi-heart</h3>
+    <a class="download" href="models/emmi-heart.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-51" data-stl="models/befriends-cable-.stl"></div>
+    <h3>befriends-cable-</h3>
+    <a class="download" href="models/befriends-cable-.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-52" data-stl="models/dusch-seife.stl"></div>
+    <h3>dusch-seife</h3>
+    <a class="download" href="models/dusch-seife.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-53" data-stl="models/aeropress-filter.stl"></div>
+    <h3>aeropress-filter</h3>
+    <a class="download" href="models/aeropress-filter.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-54" data-stl="models/dusch-seife2.stl"></div>
+    <h3>dusch-seife2</h3>
+    <a class="download" href="models/dusch-seife2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-55" data-stl="models/garmin-trek920-1.stl"></div>
+    <h3>garmin-trek920-1</h3>
+    <a class="download" href="models/garmin-trek920-1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-56" data-stl="models/tintenabfueller2.stl"></div>
+    <h3>tintenabfueller2</h3>
+    <a class="download" href="models/tintenabfueller2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-57" data-stl="models/brooks-saddle.stl"></div>
+    <h3>brooks-saddle</h3>
+    <a class="download" href="models/brooks-saddle.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-58" data-stl="models/billet-drip-tip.stl"></div>
+    <h3>billet-drip-tip</h3>
+    <a class="download" href="models/billet-drip-tip.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-59" data-stl="models/bilderrahmen2.stl"></div>
+    <h3>bilderrahmen2</h3>
+    <a class="download" href="models/bilderrahmen2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-60" data-stl="models/led4socket.stl"></div>
+    <h3>led4socket</h3>
+    <a class="download" href="models/led4socket.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-61" data-stl="models/shaver-accessoires3.stl"></div>
+    <h3>shaver-accessoires3</h3>
+    <a class="download" href="models/shaver-accessoires3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-62" data-stl="models/teleskop-reader.stl"></div>
+    <h3>teleskop-reader</h3>
+    <a class="download" href="models/teleskop-reader.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-63" data-stl="models/jar-pattern.stl"></div>
+    <h3>jar-pattern</h3>
+    <a class="download" href="models/jar-pattern.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-64" data-stl="models/garmin-vorbau4.stl"></div>
+    <h3>garmin-vorbau4</h3>
+    <a class="download" href="models/garmin-vorbau4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-65" data-stl="models/magnet-fridge.stl"></div>
+    <h3>magnet-fridge</h3>
+    <a class="download" href="models/magnet-fridge.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-66" data-stl="models/keyfobb.stl"></div>
+    <h3>keyfobb</h3>
+    <a class="download" href="models/keyfobb.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-67" data-stl="models/grindstone2.stl"></div>
+    <h3>grindstone2</h3>
+    <a class="download" href="models/grindstone2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-68" data-stl="models/garmin-vorbau3.stl"></div>
+    <h3>garmin-vorbau3</h3>
+    <a class="download" href="models/garmin-vorbau3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-69" data-stl="models/bleutooth-free2.stl"></div>
+    <h3>bleutooth-free2</h3>
+    <a class="download" href="models/bleutooth-free2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-70" data-stl="models/klingen-kiste.stl"></div>
+    <h3>klingen-kiste</h3>
+    <a class="download" href="models/klingen-kiste.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-71" data-stl="models/freecadtutorial.stl"></div>
+    <h3>freecadtutorial</h3>
+    <a class="download" href="models/freecadtutorial.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-72" data-stl="models/trainer.stl"></div>
+    <h3>trainer</h3>
+    <a class="download" href="models/trainer.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-73" data-stl="models/brettchen.stl"></div>
+    <h3>brettchen</h3>
+    <a class="download" href="models/brettchen.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-74" data-stl="models/stand-pencil.stl"></div>
+    <h3>stand-pencil</h3>
+    <a class="download" href="models/stand-pencil.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-75" data-stl="models/notizbuchstaender.stl"></div>
+    <h3>notizbuchstaender</h3>
+    <a class="download" href="models/notizbuchstaender.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-76" data-stl="models/boox-leder.stl"></div>
+    <h3>boox-leder</h3>
+    <a class="download" href="models/boox-leder.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-77" data-stl="models/stifte.stl"></div>
+    <h3>stifte</h3>
+    <a class="download" href="models/stifte.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-78" data-stl="models/maxpedition-bike.stl"></div>
+    <h3>maxpedition-bike</h3>
+    <a class="download" href="models/maxpedition-bike.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-79" data-stl="models/messerblock.stl"></div>
+    <h3>messerblock</h3>
+    <a class="download" href="models/messerblock.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-80" data-stl="models/stifte5.stl"></div>
+    <h3>stifte5</h3>
+    <a class="download" href="models/stifte5.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-81" data-stl="models/keycrhonev2.stl"></div>
+    <h3>keycrhonev2</h3>
+    <a class="download" href="models/keycrhonev2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-82" data-stl="models/jar-kitchen.stl"></div>
+    <h3>jar-kitchen</h3>
+    <a class="download" href="models/jar-kitchen.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-83" data-stl="models/lotionjar.stl"></div>
+    <h3>lotionjar</h3>
+    <a class="download" href="models/lotionjar.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-84" data-stl="models/brettchen22.stl"></div>
+    <h3>brettchen22</h3>
+    <a class="download" href="models/brettchen22.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-85" data-stl="models/box-klappe1.stl"></div>
+    <h3>box-klappe1</h3>
+    <a class="download" href="models/box-klappe1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-86" data-stl="models/kobo1.stl"></div>
+    <h3>kobo1</h3>
+    <a class="download" href="models/kobo1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-87" data-stl="models/garmin-vorbau2.stl"></div>
+    <h3>garmin-vorbau2</h3>
+    <a class="download" href="models/garmin-vorbau2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-88" data-stl="models/schale-loft.stl"></div>
+    <h3>schale-loft</h3>
+    <a class="download" href="models/schale-loft.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-89" data-stl="models/shaver2.stl"></div>
+    <h3>shaver2</h3>
+    <a class="download" href="models/shaver2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-90" data-stl="models/klingen-kiste2.stl"></div>
+    <h3>klingen-kiste2</h3>
+    <a class="download" href="models/klingen-kiste2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-91" data-stl="models/boox-leder4.stl"></div>
+    <h3>boox-leder4</h3>
+    <a class="download" href="models/boox-leder4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-92" data-stl="models/dusch-seife3.stl"></div>
+    <h3>dusch-seife3</h3>
+    <a class="download" href="models/dusch-seife3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-93" data-stl="models/dockingstation.stl"></div>
+    <h3>dockingstation</h3>
+    <a class="download" href="models/dockingstation.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-94" data-stl="models/qi-chargers24.stl"></div>
+    <h3>qi-chargers24</h3>
+    <a class="download" href="models/qi-chargers24.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-95" data-stl="models/leder4.stl"></div>
+    <h3>leder4</h3>
+    <a class="download" href="models/leder4.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-96" data-stl="models/latticeCurveTire.stl"></div>
+    <h3>latticeCurveTire</h3>
+    <a class="download" href="models/latticeCurveTire.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-97" data-stl="models/memo-pad.stl"></div>
+    <h3>memo-pad</h3>
+    <a class="download" href="models/memo-pad.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-98" data-stl="models/meisseltasche2.stl"></div>
+    <h3>meisseltasche2</h3>
+    <a class="download" href="models/meisseltasche2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-99" data-stl="models/grindstone.stl"></div>
+    <h3>grindstone</h3>
+    <a class="download" href="models/grindstone.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-100" data-stl="models/boox-balljoint.stl"></div>
+    <h3>boox-balljoint</h3>
+    <a class="download" href="models/boox-balljoint.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-101" data-stl="models/soap-holder.stl"></div>
+    <h3>soap-holder</h3>
+    <a class="download" href="models/soap-holder.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-102" data-stl="models/gabel.stl"></div>
+    <h3>gabel</h3>
+    <a class="download" href="models/gabel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-103" data-stl="models/spule.stl"></div>
+    <h3>spule</h3>
+    <a class="download" href="models/spule.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-104" data-stl="models/bilderrahmen3.stl"></div>
+    <h3>bilderrahmen3</h3>
+    <a class="download" href="models/bilderrahmen3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-105" data-stl="models/taschenlampe.stl"></div>
+    <h3>taschenlampe</h3>
+    <a class="download" href="models/taschenlampe.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-106" data-stl="models/balkonhaken.stl"></div>
+    <h3>balkonhaken</h3>
+    <a class="download" href="models/balkonhaken.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-107" data-stl="models/teleskop-reader2.stl"></div>
+    <h3>teleskop-reader2</h3>
+    <a class="download" href="models/teleskop-reader2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-108" data-stl="models/bluetooth-poang2.stl"></div>
+    <h3>bluetooth-poang2</h3>
+    <a class="download" href="models/bluetooth-poang2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-109" data-stl="models/poang-cup.stl"></div>
+    <h3>poang-cup</h3>
+    <a class="download" href="models/poang-cup.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-110" data-stl="models/kayfun5drehen.stl"></div>
+    <h3>kayfun5drehen</h3>
+    <a class="download" href="models/kayfun5drehen.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-111" data-stl="models/öpcjeosemsatz.stl"></div>
+    <h3>öpcjeosemsatz</h3>
+    <a class="download" href="models/öpcjeosemsatz.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-112" data-stl="models/doublebarrellll.stl"></div>
+    <h3>doublebarrellll</h3>
+    <a class="download" href="models/doublebarrellll.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-113" data-stl="models/keychronv3.stl"></div>
+    <h3>keychronv3</h3>
+    <a class="download" href="models/keychronv3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-114" data-stl="models/tintenabfueller.stl"></div>
+    <h3>tintenabfueller</h3>
+    <a class="download" href="models/tintenabfueller.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-115" data-stl="models/armband-emmi.stl"></div>
+    <h3>armband-emmi</h3>
+    <a class="download" href="models/armband-emmi.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-116" data-stl="models/powerbank-monitor.stl"></div>
+    <h3>powerbank-monitor</h3>
+    <a class="download" href="models/powerbank-monitor.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-117" data-stl="models/e-reader-hull-clip.stl"></div>
+    <h3>e-reader-hull-clip</h3>
+    <a class="download" href="models/e-reader-hull-clip.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-118" data-stl="models/monitor.stl"></div>
+    <h3>monitor</h3>
+    <a class="download" href="models/monitor.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-119" data-stl="models/maus-tasche2.stl"></div>
+    <h3>maus-tasche2</h3>
+    <a class="download" href="models/maus-tasche2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-120" data-stl="models/led-ring.stl"></div>
+    <h3>led-ring</h3>
+    <a class="download" href="models/led-ring.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-121" data-stl="models/leder.stl"></div>
+    <h3>leder</h3>
+    <a class="download" href="models/leder.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-122" data-stl="models/fritz2.stl"></div>
+    <h3>fritz2</h3>
+    <a class="download" href="models/fritz2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-123" data-stl="models/eimerchen.stl"></div>
+    <h3>eimerchen</h3>
+    <a class="download" href="models/eimerchen.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-124" data-stl="models/brettchen2.stl"></div>
+    <h3>brettchen2</h3>
+    <a class="download" href="models/brettchen2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-125" data-stl="models/kiste-ahle.stl"></div>
+    <h3>kiste-ahle</h3>
+    <a class="download" href="models/kiste-ahle.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-126" data-stl="models/leder-radius.stl"></div>
+    <h3>leder-radius</h3>
+    <a class="download" href="models/leder-radius.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-127" data-stl="models/cable-box-2.stl"></div>
+    <h3>cable-box-2</h3>
+    <a class="download" href="models/cable-box-2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-128" data-stl="models/teleskop-reader3.stl"></div>
+    <h3>teleskop-reader3</h3>
+    <a class="download" href="models/teleskop-reader3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-129" data-stl="models/dusch-abzieher.stl"></div>
+    <h3>dusch-abzieher</h3>
+    <a class="download" href="models/dusch-abzieher.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-130" data-stl="models/grindstone3.stl"></div>
+    <h3>grindstone3</h3>
+    <a class="download" href="models/grindstone3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-131" data-stl="models/boox1.stl"></div>
+    <h3>boox1</h3>
+    <a class="download" href="models/boox1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-132" data-stl="models/two-bottles-of-liquid.stl"></div>
+    <h3>two-bottles-of-liquid</h3>
+    <a class="download" href="models/two-bottles-of-liquid.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-133" data-stl="models/leder-auf-sockel.stl"></div>
+    <h3>leder-auf-sockel</h3>
+    <a class="download" href="models/leder-auf-sockel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-134" data-stl="models/boox-leder2.stl"></div>
+    <h3>boox-leder2</h3>
+    <a class="download" href="models/boox-leder2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-135" data-stl="models/lineal1.stl"></div>
+    <h3>lineal1</h3>
+    <a class="download" href="models/lineal1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-136" data-stl="models/teeloeffel.stl"></div>
+    <h3>teeloeffel</h3>
+    <a class="download" href="models/teeloeffel.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-137" data-stl="models/stifte3.stl"></div>
+    <h3>stifte3</h3>
+    <a class="download" href="models/stifte3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-138" data-stl="models/articulated.stl"></div>
+    <h3>articulated</h3>
+    <a class="download" href="models/articulated.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-139" data-stl="models/boox2-first-approach.stl"></div>
+    <h3>boox2-first-approach</h3>
+    <a class="download" href="models/boox2-first-approach.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-140" data-stl="models/abdeckung.stl"></div>
+    <h3>abdeckung</h3>
+    <a class="download" href="models/abdeckung.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-141" data-stl="models/treck-light2.stl"></div>
+    <h3>treck-light2</h3>
+    <a class="download" href="models/treck-light2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-142" data-stl="models/flowieDreiArmigerHalter.stl"></div>
+    <h3>flowieDreiArmigerHalter</h3>
+    <a class="download" href="models/flowieDreiArmigerHalter.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-143" data-stl="models/leder2.stl"></div>
+    <h3>leder2</h3>
+    <a class="download" href="models/leder2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-144" data-stl="models/federschale.stl"></div>
+    <h3>federschale</h3>
+    <a class="download" href="models/federschale.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-145" data-stl="models/panels.stl"></div>
+    <h3>panels</h3>
+    <a class="download" href="models/panels.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-146" data-stl="models/led-ring2.stl"></div>
+    <h3>led-ring2</h3>
+    <a class="download" href="models/led-ring2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-147" data-stl="models/holzverbinder.stl"></div>
+    <h3>holzverbinder</h3>
+    <a class="download" href="models/holzverbinder.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-148" data-stl="models/vandy-pulse-v2.stl"></div>
+    <h3>vandy-pulse-v2</h3>
+    <a class="download" href="models/vandy-pulse-v2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-149" data-stl="models/poang-remotew.stl"></div>
+    <h3>poang-remotew</h3>
+    <a class="download" href="models/poang-remotew.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-150" data-stl="models/busch-müller-cube2.stl"></div>
+    <h3>busch-müller-cube2</h3>
+    <a class="download" href="models/busch-müller-cube2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-151" data-stl="models/gucci-keks2.stl"></div>
+    <h3>gucci-keks2</h3>
+    <a class="download" href="models/gucci-keks2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-152" data-stl="models/aeropress.stl"></div>
+    <h3>aeropress</h3>
+    <a class="download" href="models/aeropress.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-153" data-stl="models/pannier-clip-holders.stl"></div>
+    <h3>pannier-clip-holders</h3>
+    <a class="download" href="models/pannier-clip-holders.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-154" data-stl="models/keychron3justlever.stl"></div>
+    <h3>keychron3justlever</h3>
+    <a class="download" href="models/keychron3justlever.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-155" data-stl="models/pomodoro2.stl"></div>
+    <h3>pomodoro2</h3>
+    <a class="download" href="models/pomodoro2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-156" data-stl="models/shaver-accessoires.stl"></div>
+    <h3>shaver-accessoires</h3>
+    <a class="download" href="models/shaver-accessoires.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-157" data-stl="models/knurledjar.stl"></div>
+    <h3>knurledjar</h3>
+    <a class="download" href="models/knurledjar.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-158" data-stl="models/Koch-werkzeug.stl"></div>
+    <h3>Koch-werkzeug</h3>
+    <a class="download" href="models/Koch-werkzeug.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-159" data-stl="models/jar-kitchen3.stl"></div>
+    <h3>jar-kitchen3</h3>
+    <a class="download" href="models/jar-kitchen3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-160" data-stl="models/woody.stl"></div>
+    <h3>woody</h3>
+    <a class="download" href="models/woody.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-161" data-stl="models/langhaken-balkon.stl"></div>
+    <h3>langhaken-balkon</h3>
+    <a class="download" href="models/langhaken-balkon.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-162" data-stl="models/bilderrahmen1.stl"></div>
+    <h3>bilderrahmen1</h3>
+    <a class="download" href="models/bilderrahmen1.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-163" data-stl="models/kitchen-bottles.stl"></div>
+    <h3>kitchen-bottles</h3>
+    <a class="download" href="models/kitchen-bottles.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-164" data-stl="models/bilderrahmen.stl"></div>
+    <h3>bilderrahmen</h3>
+    <a class="download" href="models/bilderrahmen.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-165" data-stl="models/vapehull2.stl"></div>
+    <h3>vapehull2</h3>
+    <a class="download" href="models/vapehull2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-166" data-stl="models/flowieFlansch2022-0909.stl"></div>
+    <h3>flowieFlansch2022-0909</h3>
+    <a class="download" href="models/flowieFlansch2022-0909.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-167" data-stl="models/Measure-the-garmin.stl"></div>
+    <h3>Measure-the-garmin</h3>
+    <a class="download" href="models/Measure-the-garmin.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-168" data-stl="models/leder-3d-test.stl"></div>
+    <h3>leder-3d-test</h3>
+    <a class="download" href="models/leder-3d-test.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-169" data-stl="models/leder3.stl"></div>
+    <h3>leder3</h3>
+    <a class="download" href="models/leder3.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-170" data-stl="models/ebook-magnet.stl"></div>
+    <h3>ebook-magnet</h3>
+    <a class="download" href="models/ebook-magnet.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-171" data-stl="models/bilderrahmen40final.stl"></div>
+    <h3>bilderrahmen40final</h3>
+    <a class="download" href="models/bilderrahmen40final.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-172" data-stl="models/balljoint2.stl"></div>
+    <h3>balljoint2</h3>
+    <a class="download" href="models/balljoint2.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-173" data-stl="models/maus-tasche.stl"></div>
+    <h3>maus-tasche</h3>
+    <a class="download" href="models/maus-tasche.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stl-viewer" id="viewer-174" data-stl="models/aeropress-an-die-wand.stl"></div>
+    <h3>aeropress-an-die-wand</h3>
+    <a class="download" href="models/aeropress-an-die-wand.stl" download>Download STL</a>
+    <div class="thumbs">
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.stl-viewer').forEach(container => {
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xf0f0f0);
+  
+  const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+  
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  
+  scene.add(new THREE.AmbientLight(0x404040, 2));
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+  dirLight.position.set(1, 1, 1);
+  scene.add(dirLight);
+  
+  const loader = new THREE.STLLoader();
+  loader.load(container.dataset.stl, geometry => {
+    const material = new THREE.MeshStandardMaterial({ color: 0x0077be, metalness: 0.3, roughness: 0.6 });
+    const mesh = new THREE.Mesh(geometry, material);
+    
+    geometry.computeBoundingBox();
+    const center = geometry.boundingBox.getCenter(new THREE.Vector3());
+    const size = geometry.boundingBox.getSize(new THREE.Vector3());
+    mesh.position.sub(center);
+    
+    scene.add(mesh);
+    camera.position.z = Math.max(size.x, size.y, size.z) * 2;
+    controls.update();
+  });
+  
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+});
+</script>
+</body></html>
