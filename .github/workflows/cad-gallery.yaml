@@ -103,11 +103,11 @@ jobs:
     needs: [export, screenshots]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: cad-exports
           path: exports/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         continue-on-error: true
         with:
           name: screenshots
@@ -141,7 +141,7 @@ jobs:
     needs: export
     if: startsWith(github.ref, 'refs/tags/')
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: cad-exports
           path: exports/
