@@ -1,5 +1,8 @@
 name: CAD Gallery
-
+permissions:
+  contents: write      # für GitHub Releases (Assets hochladen)
+  pages: write         # für GitHub Pages deploy
+  id-token: write      # Pages OIDC-Auth
 on:
   push:
     branches: [main]
