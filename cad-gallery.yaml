@@ -17,5 +17,5 @@ output_dir: "gallery"
 # Directory for exported STL/STEP files
 exports_dir: "exports"
 
-title: M Schmitt FreeCad Models
+title: Schmiddim FreeCad Models
 
