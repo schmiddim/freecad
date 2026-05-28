@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/schmiddim/freecad-action/refs/tags/v2/schemas/meta.schema.json
-title: "notizbuchstaender"
-description: "Add your description here"
+title: "Stand for Notebooks"
+description: "I think that only fit my needs"
 tags:
   - tag1
   - tag2
@@ -8,5 +8,5 @@ categories:
   - category1
 license: "CC-BY-SA-4.0"
 images:
-  - filename: "20241115_083059.jpg"
+  - filename: "20260528_140852.jpg"
     caption: "Optional caption"
