@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Build Gallery
-        uses: schmiddim/freecad-action@v2
+        uses: schmiddim/freecad-action@v3
         with:
           send-ping: 'true'
       - uses: actions/configure-pages@v6
